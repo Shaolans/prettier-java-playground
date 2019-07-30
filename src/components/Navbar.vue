@@ -43,7 +43,6 @@ export default {
     margin-left: 0.25%;
   }
 
-
   .navbar {
     background-color: #1a2b34;
     min-height: 10%;
