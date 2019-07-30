@@ -1,24 +1,31 @@
 <template>
   <div class="code-area row">
-    <div class="code col">
-      <textarea v-model="code" rows="35"></textarea>
+    <div class="col-6 row">
+      <LineCount class="counter col-1" :code="code"></LineCount>  
+      <textarea class="col" rows="35" v-model="code"></textarea>
     </div>
-    <div class="result col">
-      <textarea rows="35" readonly v-model="prettify"></textarea>
+
+    <div class="col-6 row">
+      <LineCount class="counter col-1" :code="prettify"></LineCount>
+      <textarea class="col" rows="35" readonly v-model="prettify"></textarea>
     </div>
+
   </div>
 </template>
 
 <script>
 import prettier from 'prettier/standalone'
 import prettierPluginJava from 'prettier-plugin-java'
+import LineCount from './LineCount'
 
 export default {
   name: 'CodeArea',
+  components: {
+    LineCount
+  },
   data () {
     return {
       code: '',
-      result: '',
       cst: {}
     }
   },
@@ -40,10 +47,11 @@ export default {
 
 <style scoped>
   textarea {
-      width: 100%;
-      height: auto;
-      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-      -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-      box-sizing: border-box;         /* Opera/IE 8+ */
+    width: 100%;
+    height: auto;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
   }
+
 </style>
