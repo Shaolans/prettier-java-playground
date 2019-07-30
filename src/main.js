@@ -2,6 +2,12 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import VueGitHubButtons from 'vue-github-buttons'
+import 'vue-github-buttons/dist/vue-github-buttons.css'
+
+Vue.use(VueGitHubButtons)
 
 Vue.config.productionTip = false
 
