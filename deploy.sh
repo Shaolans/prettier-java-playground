@@ -6,3 +6,4 @@ mv dist/* .;
 git add index.html static;
 git commit -m "deploy";
 git push origin gh-pages -f;
+git checkout master;
