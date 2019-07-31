@@ -31,7 +31,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env
-    }),
+    }),/*
     new UglifyJsPlugin({
       uglifyOptions: {
         compress: {
@@ -40,7 +40,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       },
       sourceMap: config.build.productionSourceMap,
       parallel: true
-    }),
+    }),*/
     // extract css into its own file
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css'),
