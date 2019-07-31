@@ -1,6 +1,6 @@
 {
   "name": "prettier-java-playground",
-  "version": "1.0.0",
+  "version": "0.3.1",
   "description": "A playground to test Java support on Prettier !",
   "author": "Ling-Chun SO <lingchun.so@gmail.com>",
   "private": true,
@@ -17,7 +17,8 @@
     "prettier": "^1.18.2",
     "prettier-plugin-java": "^0.3.1",
     "vue": "^2.5.2",
-    "vue-github-buttons": "^3.1.0"
+    "vue-github-buttons": "^3.1.0",
+    "vue2-ace-editor": "^0.0.13"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

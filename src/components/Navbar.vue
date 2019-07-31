@@ -1,9 +1,9 @@
 <template>
-  <div class="navbar row-2">
+  <div class="navbar row">
     <div class="nav-item logo-wrapper col-5 row">
       <img class="logo" src="../assets/prettier-logo.svg">
-      <h1>Prettier-java</h1>
-      <span id="version">v.0.3.1</span>
+      <a style="color:white" href="https://github.com/jhipster/prettier-java/"><span class="align-middle" style="font-size:18px;">Prettier-java</span></a>
+      <a href="https://www.npmjs.com/package/prettier-plugin-java"><span id="version">v.{{version}}</span></a>
     </div>
 
     <div class="nav-item col-2">
@@ -23,8 +23,15 @@
 </template>
 
 <script>
+import packageJson from '../../package.json'
+
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  data () {
+    return {
+      version: packageJson.version
+    }
+  }
 }
 </script>
 

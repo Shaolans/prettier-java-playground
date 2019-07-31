@@ -1,32 +1,45 @@
 <template>
   <div class="code-area row">
-    <div class="col-6 row">
-      <LineCount class="counter col-1" :code="code"></LineCount>
-      <textarea class="col" rows="35" v-model="code"></textarea>
+    <div class="editor col-6 nopadding">
+      <Editor lang="java" theme="chrome" width="100%" v-model="code" v-bind:options="optionCode"></Editor>
     </div>
 
-    <div class="col-6 row">
-      <LineCount class="counter col-1" :code="prettify"></LineCount>
-      <textarea class="col" rows="35" readonly v-model="prettify"></textarea>
+    <div class="editor col-6 nopadding">
+      <Editor lang="java" theme="chrome" width="100%" v-model="prettify" v-bind:options="optionRes"></Editor>
     </div>
-
   </div>
 </template>
 
 <script>
 import prettier from 'prettier/standalone'
 import prettierPluginJava from 'prettier-plugin-java'
-import LineCount from './LineCount'
+import Editor from 'vue2-ace-editor'
+import 'brace/ext/language_tools'
+import 'brace/mode/html'
+import 'brace/mode/java'
+import 'brace/mode/less'
+import 'brace/theme/chrome'
+import 'brace/snippets/java'
 
 export default {
   name: 'CodeArea',
   components: {
-    LineCount
+    Editor
   },
   data () {
     return {
       code: '',
-      cst: {}
+      cst: {},
+      optionCode: {
+        fontSize: '16px',
+        enableBasicAutocompletion: true,
+        maxLines: 1000
+      },
+      optionRes: {
+        readOnly: true,
+        fontSize: '16px',
+        maxLines: 1000
+      }
     }
   },
   computed: {
@@ -46,12 +59,12 @@ export default {
 </script>
 
 <style scoped>
-  textarea {
-    width: 100%;
-    height: auto;
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */
+  .nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
+  .editor {
+    height: auto;
+  }
 </style>
