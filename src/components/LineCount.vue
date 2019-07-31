@@ -14,17 +14,15 @@ export default {
   },
   data () {
     return {
-      code: ''
     }
   },
   computed: {
     lineCount: function () {
-      return this.code.length ? this.code.split(/\r\n|\r|\n/).length : 0;
+      return this.code.length ? this.code.split(/\r\n|\r|\n/).length : 0
     }
   }
 }
 </script>
-
 
 <style scoped>
   .counter {

@@ -1,7 +1,7 @@
 <template>
   <div class="code-area row">
     <div class="col-6 row">
-      <LineCount class="counter col-1" :code="code"></LineCount>  
+      <LineCount class="counter col-1" :code="code"></LineCount>
       <textarea class="col" rows="35" v-model="code"></textarea>
     </div>
 
