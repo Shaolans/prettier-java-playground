@@ -71,7 +71,7 @@ export default {
           tabWidth: 2
         })
       } catch (e) {
-        return e.toString()
+        return this.code
       }
     }
   }
