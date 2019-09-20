@@ -21,7 +21,7 @@ import 'brace/mode/less'
 import 'brace/theme/chrome'
 import 'brace/snippets/java'
 
-const codeSample = 
+const codeSample =
 `public class Prettier {
   
   public boolean prettierIsAwesome(int myFirstArgument, int mySecondArgument, int myThirdArgument, int myFourthArgument, int myFifthArgument) {
@@ -39,7 +39,7 @@ const codeSample =
     return mo.very().very().very().very().very().very().very().very().very().very().very().very().very().longMethod();
   }
 }
-`;
+`
 
 export default {
   name: 'CodeArea',
