@@ -13,12 +13,12 @@
   "dependencies": {
     "bootstrap": "4.3.1",
     "jquery": "3.4.1",
-    "popper.js": "1.15.0",
+    "popper.js": "1.16.0",
     "prettier": "1.18.2",
     "prettier-plugin-java": "0.4.0",
-    "vue": "2.5.2",
+    "vue": "2.6.10",
     "vue-github-buttons": "3.1.0",
-    "vue2-ace-editor": "0.0.13"
+    "vue2-ace-editor": "0.0.15"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
