@@ -1,18 +1,18 @@
 <template>
   <div class="navbar row">
-    <div class="nav-item logo-wrapper col-5 row">
+    <div class="nav-item logo-wrapper col-md-5 col-6 row">
       <img class="logo" src="../assets/prettier-logo.svg">
       <a style="color:white" href="https://github.com/jhipster/prettier-java/"><span class="align-middle" style="font-size:18px;">Prettier-java</span></a>
       <a href="https://www.npmjs.com/package/prettier-plugin-java"><span id="version">v.{{version}}</span></a>
     </div>
 
-    <div class="nav-item col-2">
+    <div class="nav-item col-md-2 col-6">
       <a href="https://www.jhipster.tech/">
         <img class="jh-logo" src="../assets/JHipster-logo.png">
       </a>
     </div>
 
-    <div class="nav-item github col-5">
+    <div class="nav-item github col-md-5 col-12">
       <div class="float-right">
         <gh-btns-watch slug="jhipster/prettier-java" show-count></gh-btns-watch>
         <gh-btns-star slug="jhipster/prettier-java" show-count></gh-btns-star>
@@ -23,13 +23,13 @@
 </template>
 
 <script>
-import packageJson from '../../package.json'
+import prettierJavaJson from '../../node_modules/prettier-plugin-java/package.json'
 
 export default {
   name: 'Navbar',
   data () {
     return {
-      version: packageJson.version
+      version: prettierJavaJson.version
     }
   }
 }
